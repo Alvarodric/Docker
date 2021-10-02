@@ -25,6 +25,12 @@ vim docker-compose.yaml &&
 sudo docker-compose up -d 
 ```
 
+## ENABLE PERMISSIONS ## 
+
+```
+sudo chmod 666 /var/run/docker.sock
+```
+
 ## #INSTALL PORTAINER (ports, name, restart and volumes in CLI docker) ###
 ```
 docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
