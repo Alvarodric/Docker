@@ -3,28 +3,26 @@
 
 ### INSTALL DOCKER ### 
 ```
-sudo apt update
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
-
-sudo apt update
+sudo apt update &&
+sudo apt install apt-transport-https ca-certificates curl software-properties-common &&
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - &&
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable" &&
 ```
 
 #Make sure you are about to install from the Docker repo instead of the default Ubuntu repo (sudo apt install docker.io):
 ```
-apt-cache policy docker-ce
-sudo apt install docker-ce
+apt-cache policy docker-ce &&
+sudo apt install docker-ce &&
 
-sudo systemctl status docker
-sudo docker ps // list all containers
+sudo systemctl status docker &&
+sudo docker ps // list all containers &&
 ```
 ## INSTALL DOCKER COMPOSE ##
 ```
-sudo apt install docker-compose -y
+sudo apt install docker-compose -y &&
 
-vim docker-compose.yaml
-sudo docker-compose up -d
+vim docker-compose.yaml &&
+sudo docker-compose up -d &&
 ```
 
 ## #INSTALL PORTAINER (ports, name, restart and volumes in CLI docker) ###
