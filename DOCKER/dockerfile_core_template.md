@@ -72,5 +72,6 @@ docker logs
 ### Docker Container Volumes ###
   
 Volume is located in /var/www/logs but we can create a volume mount so if container dies , data is not lost
-
+```
 docker run - p <ports> -v /var/www/logs <imageToRun>
+```
