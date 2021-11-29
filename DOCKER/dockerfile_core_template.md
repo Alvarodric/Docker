@@ -75,3 +75,8 @@ Volume is located in /var/www/logs but we can create a volume mount so if contai
 ```
 docker run - p <ports> -v /var/www/logs <imageToRun>
 ```
+### Shell into a container ###
+  
+```
+docker exec -it <containerId> sh  
+```
