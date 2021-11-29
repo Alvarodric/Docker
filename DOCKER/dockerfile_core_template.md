@@ -34,6 +34,7 @@ Specifiy what to run when it starts up
 ENTRYPOINT ["node", "server.js"]
 ```
 --------------------------------------------------------------------------------------------------------------------------------
+### Docker Build ###
 
 In order to build the image
 ```
@@ -52,3 +53,24 @@ docker pull alvaro/nodeapp:1.0
 ### .dockerignore ###
 
 It Works as .gitignore and you can say which files you dont want to copy
+
+-------------------------------------------------------------------------------------------------------------------------------
+### Docker Run ### 
+
+docker run -p <externalPort>:<internalPort> -d <imageName> (-d is used for not locking the console "detached") 
+```
+docker run -p 8080:80 -d nginx:alpine
+docker ps -a 
+docker stop ce
+docker remove ce
+```
+### Docker Logs ###   
+```
+docker logs
+```
+  
+### Docker Container Volumes ###
+  
+Volume is located in /var/www/logs but we can create a volume mount so if container dies , data is not lost
+
+docker run - p <ports> -v /var/www/logs <imageToRun>
