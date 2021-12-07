@@ -17,3 +17,8 @@ update and stop a container that is in a crash-loop with
 ```
 docker update –restart=no && docker stop
 ```
+
+If you want to clean up and delete all unused container images, just add -a
+```
+docker image prune -a
+```
